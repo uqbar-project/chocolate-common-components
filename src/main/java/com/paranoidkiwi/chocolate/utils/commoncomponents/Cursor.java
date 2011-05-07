@@ -1,6 +1,6 @@
 package com.paranoidkiwi.chocolate.utils.commoncomponents;
 
-import com.paranoidkiwi.chocolate.core.appearances.VisualStrategy;
+import com.paranoidkiwi.chocolate.core.appearances.Appearance;
 import com.paranoidkiwi.chocolate.core.bounds.BoundingBox;
 import com.paranoidkiwi.chocolate.core.components.CollisionableComponent;
 import com.paranoidkiwi.chocolate.core.reactions.annotations.OnMouseMoved;
@@ -12,10 +12,10 @@ public abstract class Cursor extends CollisionableComponent {
 	// ** CONSTRUCTORS
 	// ****************************************************************
 
-	public Cursor(VisualStrategy visualStrategy, BoundingBox boundingBox, int collisionGroup) {
+	public Cursor(Appearance appearance, BoundingBox boundingBox, int collisionGroup) {
 		super(boundingBox, collisionGroup);
 
-		this.setVisualStrategy(visualStrategy);
+		this.setAppearance(appearance);
 		this.setZ(Integer.MAX_VALUE);
 	}
 

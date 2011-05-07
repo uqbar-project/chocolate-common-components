@@ -1,6 +1,6 @@
 package com.paranoidkiwi.chocolate.utils.commoncomponents.ui;
 
-import com.paranoidkiwi.chocolate.core.appearances.VisualStrategy;
+import com.paranoidkiwi.chocolate.core.appearances.Appearance;
 import com.paranoidkiwi.chocolate.core.bounds.NoBoundingBox;
 import com.paranoidkiwi.chocolate.core.components.CollisionableComponent;
 import com.paranoidkiwi.chocolate.core.reactions.annotations.OnCustomEvent;
@@ -14,10 +14,10 @@ public abstract class UIComponent extends CollisionableComponent {
 	// ** CONSTRUCTORS
 	// ****************************************************************
 
-	public UIComponent(VisualStrategy visualStrategy, double x, double y) {
+	public UIComponent(Appearance appearance, double x, double y) {
 		super(new NoBoundingBox(), UI_COMPONENT_CG, x, y);
 
-		this.setVisualStrategy(visualStrategy);
+		this.setAppearance(appearance);
 	}
 
 	// ****************************************************************

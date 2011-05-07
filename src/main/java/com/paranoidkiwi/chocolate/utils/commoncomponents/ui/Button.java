@@ -1,6 +1,6 @@
 package com.paranoidkiwi.chocolate.utils.commoncomponents.ui;
 
-import com.paranoidkiwi.chocolate.core.appearances.VisualStrategy;
+import com.paranoidkiwi.chocolate.core.appearances.Appearance;
 import com.paranoidkiwi.chocolate.core.bounds.BoundingBox;
 
 public class Button extends UIComponent {
@@ -11,8 +11,8 @@ public class Button extends UIComponent {
 	// ** CONSTRUCTORS
 	// ****************************************************************
 
-	public Button(VisualStrategy visualStrategy, BoundingBox boundingBox, double x, double y, UIAction mainAction) {
-		super(visualStrategy, x, y);
+	public Button(Appearance appearance, BoundingBox boundingBox, double x, double y, UIAction mainAction) {
+		super(appearance, x, y);
 
 		this.setBoundingBox(boundingBox);
 		this.setMainAction(mainAction);

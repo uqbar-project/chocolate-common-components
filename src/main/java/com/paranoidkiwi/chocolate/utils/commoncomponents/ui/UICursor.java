@@ -1,6 +1,6 @@
 package com.paranoidkiwi.chocolate.utils.commoncomponents.ui;
 
-import com.paranoidkiwi.chocolate.core.appearances.VisualStrategy;
+import com.paranoidkiwi.chocolate.core.appearances.Appearance;
 import com.paranoidkiwi.chocolate.core.bounds.BoundingBox;
 import com.paranoidkiwi.chocolate.core.components.CollisionableComponent;
 import com.paranoidkiwi.chocolate.core.reactions.annotations.OnMousePressed;
@@ -16,8 +16,8 @@ public class UICursor extends Cursor {
 	// ** CONSTRUCTORS
 	// ****************************************************************
 
-	public UICursor(VisualStrategy visualStrategy, BoundingBox boundingBox) {
-		super(visualStrategy, boundingBox, UI_CURSOR_CG);
+	public UICursor(Appearance appearance, BoundingBox boundingBox) {
+		super(appearance, boundingBox, UI_CURSOR_CG);
 	}
 
 	// ****************************************************************
