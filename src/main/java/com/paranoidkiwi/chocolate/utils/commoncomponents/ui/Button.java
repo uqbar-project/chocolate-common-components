@@ -1,7 +1,7 @@
 package com.paranoidkiwi.chocolate.utils.commoncomponents.ui;
 
 import com.paranoidkiwi.chocolate.core.appearances.Appearance;
-import com.paranoidkiwi.chocolate.core.bounds.BoundingBox;
+import com.paranoidkiwi.chocolate.core.collisions.BoundingBox;
 
 public class Button extends UIComponent {
 

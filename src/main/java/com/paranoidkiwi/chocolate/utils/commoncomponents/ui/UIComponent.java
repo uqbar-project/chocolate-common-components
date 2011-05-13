@@ -1,7 +1,7 @@
 package com.paranoidkiwi.chocolate.utils.commoncomponents.ui;
 
 import com.paranoidkiwi.chocolate.core.appearances.Appearance;
-import com.paranoidkiwi.chocolate.core.bounds.NoBoundingBox;
+import com.paranoidkiwi.chocolate.core.collisions.NoBoundingBox;
 import com.paranoidkiwi.chocolate.core.components.CollisionableComponent;
 import com.paranoidkiwi.chocolate.core.reactions.annotations.OnCustomEvent;
 

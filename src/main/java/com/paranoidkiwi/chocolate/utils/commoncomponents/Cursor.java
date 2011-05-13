@@ -1,7 +1,7 @@
 package com.paranoidkiwi.chocolate.utils.commoncomponents;
 
 import com.paranoidkiwi.chocolate.core.appearances.Appearance;
-import com.paranoidkiwi.chocolate.core.bounds.BoundingBox;
+import com.paranoidkiwi.chocolate.core.collisions.BoundingBox;
 import com.paranoidkiwi.chocolate.core.components.CollisionableComponent;
 import com.paranoidkiwi.chocolate.core.reactions.annotations.OnMouseMoved;
 import com.paranoidkiwi.chocolate.core.reactions.events.io.mouse.MouseMovedEvent;
