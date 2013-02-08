@@ -8,28 +8,24 @@ import com.paranoidkiwi.chocolate.core.reactions.enums.MouseButton;
 import com.paranoidkiwi.chocolate.core.reactions.events.CustomEvent;
 import com.paranoidkiwi.chocolate.utils.commoncomponents.Cursor;
 
-public class UICursor extends Cursor {
+object 	UICursor {
+	final val UI_CURSOR_CG = 7773
+}
 
-	public static final int UI_CURSOR_CG = 7773;
+import UICursor._
 
-	// ****************************************************************
-	// ** CONSTRUCTORS
-	// ****************************************************************
-
-	public UICursor(Appearance appearance, BoundingBox boundingBox) {
-		super(appearance, boundingBox, UI_CURSOR_CG);
-	}
+class UICursor(appearance: Appearance, boundingBox: BoundingBox) extends Cursor(appearance, boundingBox, UI_CURSOR_CG) {
 
 	// ****************************************************************
 	// ** TRIGGERS
 	// ****************************************************************
 
 	@OnMousePressed(button = MouseButton.LEFT)
-	public void requireMainAction() {
-		CollisionableComponent componentUnder = this.getAffectedComponent();
+	def requireMainAction = {
+		def componentUnder = affectedComponent
 
 		if (componentUnder != null) {
-			componentUnder.reactTo(new CustomEvent(UIComponent.MAIN_ACTION));
+			componentUnder.reactTo(new CustomEvent(UIComponent.MAIN_ACTION))
 		}
 	}
 
@@ -37,13 +33,5 @@ public class UICursor extends Cursor {
 	// ** QUERIES
 	// ****************************************************************
 
-	protected CollisionableComponent getAffectedComponent() {
-		CollisionableComponent answer = null;
-
-		for (CollisionableComponent component : this.getCollidingComponents()) {
-			answer = answer == null || answer.getZ() < component.getZ() ? component : answer;
-		}
-
-		return answer;
-	}
+	def affectedComponent = collidingComponents maxBy { _.z }
 }
