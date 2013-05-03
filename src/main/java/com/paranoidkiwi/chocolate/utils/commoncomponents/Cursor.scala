@@ -22,5 +22,5 @@ abstract class Cursor(appearance: Appearance, boundingBox: BoundingBox, collisio
 	// ****************************************************************
 
 	@OnMouseMoved
-	def updatePosition(e: MouseMovedEvent) = position = e.getPosition
+	def updatePosition(e: MouseMovedEvent) = position = e.position
 }
