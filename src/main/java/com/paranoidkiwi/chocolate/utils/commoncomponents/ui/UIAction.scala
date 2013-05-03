@@ -1,10 +1,10 @@
 package com.paranoidkiwi.chocolate.utils.commoncomponents.ui;
 
-public interface UIAction {
+trait UIAction {
 
 	// ****************************************************************
 	// ** OPERATIONS
 	// ****************************************************************
 
-	public abstract void perform(UIComponent component);
+	def perform(component: UIComponent): Unit
 }
