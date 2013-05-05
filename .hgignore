@@ -6,3 +6,5 @@ syntax: glob
 .settings
 syntax: regexp
 ^bin$
+syntax: glob
+.cache
