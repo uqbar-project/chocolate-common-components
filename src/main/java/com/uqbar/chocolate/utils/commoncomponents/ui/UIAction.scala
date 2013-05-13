@@ -1,4 +1,4 @@
-package com.paranoidkiwi.chocolate.utils.commoncomponents.ui;
+package com.uqbar.chocolate.utils.commoncomponents.ui;
 
 trait UIAction {
 
