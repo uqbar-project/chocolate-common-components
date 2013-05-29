@@ -1,11 +1,11 @@
-package com.uqbar.chocolate.utils.commoncomponents.ui
+package org.uqbar.chocolate.utils.commoncomponents.ui
 
-import com.uqbar.chocolate.core.appearances.Appearance
-import com.uqbar.chocolate.core.collisions.NoBoundingBox
-import com.uqbar.chocolate.core.reactions.annotations.OnCustomEvent
+import org.uqbar.chocolate.core.appearances.Appearance
+import org.uqbar.chocolate.core.collisions.NoBoundingBox
+import org.uqbar.chocolate.core.reactions.annotations.OnCustomEvent
 import UIComponent._
-import com.uqbar.chocolate.core.components.Visible
-import com.uqbar.chocolate.core.components.Collisionable
+import org.uqbar.chocolate.core.components.Visible
+import org.uqbar.chocolate.core.components.Collisionable
 
 object UIComponent {
 	final val UI_COMPONENT_CG = 7772
@@ -21,5 +21,8 @@ trait UIComponent extends Visible with Collisionable {
 	// ****************************************************************
 
 	@OnCustomEvent(MAIN_ACTION)
+	def reactToMainAction = performMainAction
+
 	def performMainAction
+
 }

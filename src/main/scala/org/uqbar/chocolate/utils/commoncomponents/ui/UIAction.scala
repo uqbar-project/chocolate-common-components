@@ -1,4 +1,4 @@
-package com.uqbar.chocolate.utils.commoncomponents.ui;
+package org.uqbar.chocolate.utils.commoncomponents.ui;
 
 trait UIAction {
 

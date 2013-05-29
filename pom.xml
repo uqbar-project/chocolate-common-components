@@ -1,15 +1,20 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.uqbar.chocolate.utils</groupId>
+	<groupId>org.uqbar.chocolate.utils</groupId>
 	<artifactId>chocolate-common-components</artifactId>
-	<version>2.1.3</version>
+	<version>${chocolate.version}</version>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<chocolate.version>2.1.3</chocolate.version>
+	</properties>
 
 	<dependencies>
 		<dependency>
-			<groupId>com.uqbar.chocolate</groupId>
+			<groupId>org.uqbar.chocolate</groupId>
 			<artifactId>chocolate-core</artifactId>
-			<version>2.1.3</version>
+			<version>${chocolate.version}</version>
 		</dependency>
 	</dependencies>
 
