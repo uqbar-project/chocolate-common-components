@@ -8,3 +8,5 @@ syntax: regexp
 ^bin$
 syntax: glob
 .cache
+syntax: regexp
+.worksheet

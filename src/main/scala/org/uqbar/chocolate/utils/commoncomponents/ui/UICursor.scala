@@ -2,8 +2,8 @@ package org.uqbar.chocolate.utils.commoncomponents.ui;
 
 import org.uqbar.chocolate.core.appearances.Appearance
 import org.uqbar.chocolate.core.collisions.BoundingBox
+import org.uqbar.chocolate.core.reactions.annotations.io.enums.MouseButton
 import org.uqbar.chocolate.core.reactions.annotations.io.mouse.OnMousePressed
-import org.uqbar.chocolate.core.reactions.enums.MouseButton
 import org.uqbar.chocolate.core.reactions.events.CustomEvent
 import org.uqbar.chocolate.utils.commoncomponents.Cursor
 import UICursor._
@@ -34,5 +34,5 @@ class UICursor(val appearance : Appearance, val boundingBox : BoundingBox) exten
 	// ** QUERIES
 	// ****************************************************************
 
-	def affectedComponent = if (collidingComponents isEmpty) None else Some(collidingComponents maxBy { _.z })
+	def affectedComponent = if (collidingComponents.isEmpty) None else Some(collidingComponents maxBy { _.z })
 }
