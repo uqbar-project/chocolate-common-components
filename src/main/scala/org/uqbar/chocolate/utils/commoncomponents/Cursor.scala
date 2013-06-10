@@ -8,7 +8,7 @@ import org.uqbar.chocolate.core.components.Collisionable
 import org.uqbar.chocolate.core.components.Visible
 import org.uqbar.chocolate.core.components.GameComponent
 import org.uqbar.chocolate.core.dimensions.Positioned
-import org.uqbar.chocolate.core.reactions.events.MouseMovedEvent
+import org.uqbar.chocolate.core.reactions.events.MouseMoved
 
 trait Cursor extends GameComponent with Positioned {
 
@@ -23,5 +23,5 @@ trait Cursor extends GameComponent with Positioned {
 	// ****************************************************************
 
 	@OnMouseMoved
-	def updatePosition(e : MouseMovedEvent) = translation = (e.position.x, e.position.y)
+	def updatePosition(e : MouseMoved) = translation = (e.position.x, e.position.y)
 }
