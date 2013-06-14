@@ -175,10 +175,7 @@ class AStarTest(_area : AnyRef, _expected : AnyRef) {
 	val area = _area.asInstanceOf[Area]
 	val expected = _expected.asInstanceOf[Area]
 	val from = expected.zones.filter(z ⇒ z._2 == 'A')(0)
-	val to = expected.zones.find(z ⇒ z._2 == 'B') match {
-		case Some(x) ⇒ x
-		case _ ⇒ from
-	}
+	val to = expected.zones.find(z ⇒ z._2 == 'B').getOrElse(from)
 
 	@Test
 	def bestPathIsTheExpected {

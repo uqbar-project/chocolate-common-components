@@ -23,12 +23,7 @@ class UICursor(val appearance : Appearance, val boundingBox : BoundingBox) exten
 	// ****************************************************************
 
 	@OnMousePressed(button = MouseButton.LEFT)
-	def requireMainAction = {
-		affectedComponent match {
-			case Some(componentUnder) ⇒ componentUnder.reactTo(new CustomEvent(UIComponent.MAIN_ACTION))
-			case None ⇒
-		}
-	}
+	def requireMainAction = affectedComponent.foreach(_.reactTo(new CustomEvent(UIComponent.MAIN_ACTION)))
 
 	// ****************************************************************
 	// ** QUERIES

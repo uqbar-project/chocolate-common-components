@@ -2,6 +2,7 @@ package org.uqbar.chocolate.utils.commoncomponents.ai.pathfinding
 
 import scala.collection.mutable.Set
 import scala.collection.mutable.Map
+import scala.collection.immutable.Nil
 
 object AStar {
 	def apply[T](neighbors : T ⇒ Traversable[T])(translationCost : (T, T) ⇒ Double = ((a : T, b : T) ⇒ 1))(heuristicCost : (T, T) ⇒ Double)(start : T)(goal : T) : List[T] = {
@@ -11,10 +12,7 @@ object AStar {
 		val bestCost = Map[T, Double]()
 		val bestFullCost = Map[T, Double]()
 
-		def reconstructPath(goal : T) : List[T] = parents.get(goal) match {
-			case Some(parent) ⇒ reconstructPath(parent) ::: List(goal)
-			case None ⇒ Nil
-		}
+		def reconstructPath(goal : T) : List[T] = parents.get(goal).fold(List[T]())(p ⇒ reconstructPath(p) ::: List(goal))
 
 		bestCost(start) = 0
 		bestFullCost(start) = bestCost(start) + heuristicCost(start, goal)
